@@ -1,0 +1,142 @@
+<html>
+    <title>NAVBAR</title>
+    <head>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           background-image: url(BankHome.jpg);
+            background-size: cover;
+        }
+        .navbar ul li:hover{
+            background-color:darkturquoise;
+            color: orangered;
+        }
+        .main{
+            box-shadow: 0 5px 6px black;
+        }
+        .form-group{
+            margin-top: 20%;
+        }
+        .form-group btn{
+            outline:none;
+            border: 5px solid black;
+        }
+            .loan{
+                display: none;
+                list-style: none;
+                
+            }
+            .main ul li:hover .loan{
+                display: block;
+                position: absolute;
+                padding: 10px;
+                color: white;
+               
+            }
+            .main ul li:hover .loan ul li a{
+                text-decoration: none;
+                color: white;
+            }
+            .main ul li:hover .loan ul li{
+                list-style: none;
+                text-decoration: none;
+                margin: 15px;
+            }
+            .search{
+            display:none;
+            }
+            .main ul li .customer:hover .search{
+                display:block;
+            }
+    </style>
+    </head>
+   
+    <body>
+        <div class="bg-primary text-center text-white p-2">
+            <b><span><h2>Bank Management System</h2></span></b>
+        </div>
+        <div class="main">
+        
+            <nav class="navbar navbar-dark bg-primary navbar-expand-lg text-white">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#venkat">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse text-white" id="venkat">
+                    
+                <ul class="navbar-nav px-2 mx-auto">
+                    <li class="nav-item mr-5 active">
+                     <a href="#"class="nav-link navbar-brand"><i class="fa fa-home mr-2"></i>Home</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                     <a href="About.html" class="nav-link"><i class="fa fa-book mr-2"></i>About</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                     <a href="Customer.html" class="nav-link"><i class="fa fa-user-plus mr-2"></i>New-Acc</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                     <a  href="Deposite.html" class="nav-link"><i class="fa fa-credit-card-alt mr-2"></i>Deposite</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5  active">
+                     <a  href="WithDraw.html" class="nav-link"><i class="fa  fa-credit-card-alt mr-2"></i>Width-draw</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                     <a  href="Transction.html" class="nav-link"><i class="fa fa-credit-card-alt mr-2"></i>Transfor</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                     <a  href="Updation.html" class="nav-link"><i class="fa fa-pencil-square-o mr-2"></i>Update</a>   
+                    </li>
+                    
+                     <li class="nav-item mr-5 active">
+                         <a  class="nav-link"><i class="fa fa-inr mr-2"></i>Loan</a>   
+                          <div class="loan bg-primary text-white">
+                              <ul>
+                             <li><a href="LoanInterestPayment.html">Loan Interst payment</a></li>
+                             <li><a href="Loan.html">new Loan</a></li>
+                             <li><a href="Search.html">Search</a>
+                              
+                             </li>
+                              </ul>
+                         </div>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="form-group">
+            <form action="./getDetails.jsp" method="post">
+                <center>
+                    <table>
+                        <tr>
+                            <td><input type="text" name="accNo" class="btn btn-outline-warning text-white bg-none" placeholder="Account-No"></td>
+                            <td><input type="submit" value="search" class="btn btn-outline-warning text-white bg-none"></td>
+                        </tr>
+                    </table>
+                </center>
+            </form>
+        </div>
+    </body>
+</html>
